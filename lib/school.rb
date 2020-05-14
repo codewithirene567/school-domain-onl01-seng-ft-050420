@@ -20,22 +20,25 @@ class School
   end
 
 def grade(level)
-    roster.detect do |x, y| 
-      if x == level
-        return y 
-      end 
-    end 
+  roster[level]
+    #roster.detect do |x, y| 
+      #if x == level
+        #return y 
+        
+     # end 
+    #end 
   end 
   
   
   def sort
     sorted_list = {}
-    roster.each do |their_name, grade|
-      sorted_list[their_name] = grade.sort
+    roster.each do |grade, name|
+     binding.pry
+      sorted_list[grade] = name.sort
     end
     sorted_list
   end
-      
+    
 end
 
 
